@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brazilian Checkers</title>
+    <style>
+        /* Basic styling for the board */
+        .board {
+            display: grid;
+            grid-template-columns: repeat(8, 50px);
+            grid-template-rows: repeat(8, 50px);
+            border: 1px solid black;
+        }
+        .square {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            cursor: pointer;
+        }
+        .dark {
+            background-color: #a0522d; /* Sienna */
+        }
+        .light {
+            background-color: #f5f5dc; /* Beige */
+        }
+        .piece {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+        }
+        .red {
+            background-color: red;
+        }
+        .black {
+            background-color: black;
+        }
+        .king::after {
+            content: 'K'; /* Indicate king */
+            font-size: 0.5em;
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            color: gold; /* Make the 'K' gold */
+        }
+
+        /* Style for king pieces */
+        .piece.king {
+            border: 3px solid gold; /* Add a gold border */
+            box-shadow: 0 0 15px gold; /* Add a gold shadow */
+        }
+
+        /* Style for the player indicator */
+        #playerIndicator {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        /* Hover effect for pieces */
+        .piece:hover {
+            transform: scale(1.1);
+            transition: transform 0.2s ease-in-out;
+            cursor: grab;
+        }
+
+        /* Style for selected piece */
+        .piece.selected {
+            border: 2px solid blue; /* Or any other visual indicator */
+            box-shadow: 0 0 10px blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Brazilian Checkers</h1>
+    <div id="playerIndicator">Current Turn: Red</div>
+    <div id="gameBoard" class="board">
+        <!-- The game board will be rendered here by JavaScript -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

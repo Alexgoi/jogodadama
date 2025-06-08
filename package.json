@@ -1,0 +1,16 @@
+{
+  "name": "brazilian-checkers",
+  "version": "1.0.0",
+  "description": "A Brazilian checkers game",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
